@@ -129,6 +129,9 @@ def alignTrajectory(p_es, p_gt, q_es, q_gt, method, n_aligned=-1):
         s, R, t = alignSIM3(p_es, p_gt, q_es, q_gt, n_aligned)
     elif method == 'se3':
         R, t = alignSE3(p_es, p_gt, q_es, q_gt, n_aligned)
+    elif method == 'so3':
+        R, t = alignSE3(p_es, p_gt, q_es, q_gt, n_aligned) 
+        t = np.zeros((3,))
     elif method == 'posyaw':
         R, t = alignPositionYaw(p_es, p_gt, q_es, q_gt, n_aligned)
     elif method == 'none':

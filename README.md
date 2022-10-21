@@ -1,5 +1,7 @@
 # rpg_trajectory_evaluation
 
+THIS IS A FORK FROM THE [ORIGINAL](https://github.com/uzh-rpg/rpg_trajectory_evaluation) RPG_TRAJECTORY_EVALUATION REPO FROM THE ROBOTICS AND PERCEPTION GROUP. HOWEVER, SUPPORT FOR SO3 ALIGNMENT IS ADDED.
+
 This repository implements common used trajectory evaluation methods for visual(-inertial) odometry. Specifically, it includes
 * Different trajectory alignment methods (rigid-body, similarity and yaw-only rotation)
 * Commonly used error metrics: Absolute Trajectory Error (ATE) and Relative/Odometry Error (RE)
@@ -86,6 +88,7 @@ Currently `eval_cfg.yaml` specifies two parameters for trajectory alignment (use
 * `align_type`:
   * `sim3`: a similarity transformation (for vision-only monocular case)
   * `se3`: a rigid body transformation (for vision-only stereo case)
+  * `so3`: a rigid body rotation (please align the origins manually)
   * `posyaw`: a translation plus a rotation around gravity (for visual-inertial case)
   * `none`: do not align the trajectory
 * `align_num_frames`: the number of poses (starting from the beginning) that will be used in the trajectory alignment. `-1` means all poses will be used.
