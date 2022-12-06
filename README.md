@@ -1,6 +1,6 @@
 # rpg_trajectory_evaluation
 
-THIS IS A FORK FROM THE [ORIGINAL](https://github.com/uzh-rpg/rpg_trajectory_evaluation) RPG_TRAJECTORY_EVALUATION REPO FROM THE ROBOTICS AND PERCEPTION GROUP. HOWEVER, SUPPORT FOR SO3 ALIGNMENT IS ADDED.
+THIS IS A FORK FROM THE [ORIGINAL](https://github.com/uzh-rpg/rpg_trajectory_evaluation) RPG_TRAJECTORY_EVALUATION REPO FROM THE ROBOTICS AND PERCEPTION GROUP. HOWEVER, SUPPORT FOR SO3 ALIGNMENT IS ADDED. THE SO3 ALIGNMENT USES THE UMEYAMA METHOD AS USUAL BUT DISCARDS THE TRANSLATION PART.
 
 This repository implements common used trajectory evaluation methods for visual(-inertial) odometry. Specifically, it includes
 * Different trajectory alignment methods (rigid-body, similarity and yaw-only rotation)
